@@ -49,7 +49,7 @@ class MainUiClass(QtWidgets.QMainWindow, dcrawBatchUi.Ui_MainWindow ):
 		dialog = QtWidgets.QFileDialog()
 		folderPath = dialog.getExistingDirectory(None, "Select Folder")
 		self.ImagesFolderLineEdit.setText(folderPath)
-		self.files = glob.glob(folderPath+'/*.CR2')
+		self.files = glob.glob(folderPath+'/*.*')
 		self.model.clear()
 
 		for file in self.files:
